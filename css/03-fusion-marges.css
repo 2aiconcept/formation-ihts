@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+div {
+  background: rgb(236, 204, 248);
+  /* overflow: auto; */
+  /* padding: 1px 0; (pas top ajoute des pixels non voulus)*/
+  /* border: 1px solid transparent; */
+  display: flow-root; /*meilleur choix plus moderne et plus adapte au context*/
+}
+
+/* div:first-child {
+  margin-bottom: 50px;
+} */
+div > div {
+  background: #fcf394;
+  height: 60px;
+  margin: 20px 0;
+}

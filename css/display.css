@@ -1,0 +1,38 @@
+* {
+    border: 2px dotted rgb(8, 158, 228);
+}
+
+h1 {
+    background: rgb(235, 16, 16);
+    font-size: 3em;
+    border-style: dashed; 
+    border-color: rgb(229, 229, 6);
+}
+
+p {
+    border: 3px double rgb(232, 12, 192);
+    width: 800px;
+    /* margin: 10px 20px 30px 20px; */
+    margin: 10px 20px;
+    padding: 15px;
+}
+
+a {
+    border: 2px dotted rgb(12, 228, 8);
+    font-size: 20px;
+    background: rgb(202, 251, 251);
+    margin: 20px;
+    padding: 20px;
+}
+
+#uniqueLink {
+    background: blue;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1em;
+    padding: 100px;
+    margin: 15px;
+    display: inline-block;
+    
+}

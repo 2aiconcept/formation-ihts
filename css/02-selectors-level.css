@@ -1,0 +1,57 @@
+/* selecteur simple permet de cibler tous les section du DOM */
+section {
+    background: red;
+}
+
+main section {
+    background: yellow;
+}
+
+/* selecterur de class : permet de cibler tous les elements du DOM à partir de 
+leur nom de class */
+
+.mySection {
+    background: blue;
+}
+
+/* pseudo selecteur css : permet de cibler tous les elements section premier enfant
+d'un autre bloc */
+section:first-child {
+    background: green;
+}
+
+/* selecteur d'id : permet de cibler un element à partir 
+de son nom d'id (doit etre un identifiant unique par page */
+
+#mySectionId {
+    background: orange;
+}
+
+/* selecteur combinatoir : cible tous les elements du dom qui ont la class "mySection" 
+descendant direct ou indirect de l'element maim
+ */
+main .mySection {
+    background: purple;
+}
+
+/* selecteur combinatoir : cible tous les elements du dom qui ont la class "mySection"
+mais à condition qu'ils soient enfant direct de maim */
+main > .mySection {
+    background: darkblue;
+}
+
+main > section.mySection {
+    background: cyan;
+}
+
+/* ne jamais utiliser sauf dans les très rares ou j'utilise un class bootstrap sur 
+(ou autre librairie) sur laquelle il y a déjà un !important et que je veux absolument
+surchargé en css */
+/* section {
+    background: brown !important;
+} */
+
+
+main > section.mySection {
+    background: bisque;
+}

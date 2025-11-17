@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Un titre qui apparaitra dans le moteur de recherche</title>
+    <meta name="description" content="Une description de ma page qui apparaitra dans le moteur de recherche" />
+    <link rel="stylesheet" href="./css/display.css" />
+</head>
+
+<body>
+    <h1>un titre de niveau 1</h1>
+    <h2>un titre de niveau 1</h2>
+    <h3>un titre de niveau 1</h3>
+    <h4>un titre de niveau 1</h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minus
+        quibusdam vero corporis quia, recusandae quos illo tempora, distinctio
+        sequi laudantium consequuntur nostrum, at molestias ad iure voluptates
+        ullam earum!
+        <span>un element que je pourrais styler en css grace a cette balise span
+            <a href="http://www.google.fr">cliquez moi pour aller sur google</a>
+            <a href="http://www.amazon.com">cliquez moi pour aller sur amazon</a>
+        </span>
+        je veux continuer à mettre du texte qui constitue mon paragraphe, mais
+        dans mon paragraphe, j'ai quelques mots qui doivent apparaitre surlignés et
+        j'ai un lien cliquable.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloremque architecto necessitatibus dolorem.
+        Accusantium sequi est deleniti voluptate amet explicabo provident repellendus vitae, facilis nostrum consectetur
+        incidunt assumenda sit aliquid.</p>
+
+    <a id="uniqueLink" href="http://www.google">Google</a>
+    <h1>Comportement des display: block</h1>
+    <ul>
+        <li>prend par défaut la hauteur de son contenu</li>
+        <li>prend par défaut la largeur de son parent</li>
+        <li>se positionne dans le flux les uns sous les autres</li>
+        <li>on peut mettre du margin en top, right, left, bottom</li>
+        <li>on peut mettre du padding en top, right, left, bottom</li>
+        <li>attention à la fusion des marges.</li>
+    </ul>
+    <h1>Comportement des display: inline</h1>
+    <ol>
+        <li>prend par défaut la hauteur de son contenu</li>
+        <li>prend par défaut la largeur de son contenu</li>
+        <li>se positionne dans le flux les uns à coté des autres</li>
+        <li>seuls les margin left et right fonctionnent</li>
+        <li>seuls les padding right et left fonctionnent car les padding top et bottom
+            provoquent un débordement sur
+            elements alentours</li>
+    </ol>
+    <h1>Comportement d'un inline-block</h1>
+    <p>n'existe pas par défaut mais sur n'importe quel element (block ou inline)
+        je peux mettre en css display: inline-block pour modifier légèrement son
+        comportement
+    </p>
+    <ul>
+        <li>adopte tous les comportement et positionnement dans le flux d'un inline</li>
+        <li>peut prendre des margin et padding en top, right, bottom, left comme les block</li>
+    </ul>
+</body>
+
+</html>
