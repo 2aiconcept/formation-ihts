@@ -18,3 +18,15 @@ div > div {
   height: 60px;
   margin: 20px 0;
 }
+
+.gradient {
+  height: 100px;
+  background: #1aa1d6;
+  background: linear-gradient(
+    103deg,
+    rgba(26, 161, 214, 1) 0%,
+    rgba(18, 150, 135, 1) 31%,
+    rgba(47, 186, 105, 1) 58%,
+    rgba(247, 228, 57, 1) 100%
+  );
+}

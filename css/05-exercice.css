@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+}
+
+body {
+  background: #efcdf4;
+  font-size: 0;
+}
+
+span {
+  height: 100%;
+  padding: 20px;
+  display: inline-block;
+}
+span:first-child {
+  padding-right: 10px;
+  width: 30%;
+}
+span:last-child {
+  padding-left: 10px;
+  width: 70%;
+}
+
+div {
+  background: #f2e9a4;
+  width: 100%;
+  height: 100%;
+}

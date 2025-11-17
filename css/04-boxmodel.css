@@ -1,0 +1,19 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+}
+
+div {
+  height: 100%;
+  width: 100%;
+  background: #d90f0f;
+  border: 5px solid black;
+  padding: 10px;
+  /* margin: 10px; */
+}
