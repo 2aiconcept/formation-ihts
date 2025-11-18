@@ -1,0 +1,95 @@
+html,
+body {
+  margin: 0;
+}
+
+* {
+  border: 1px solid black;
+  box-sizing: border-box;
+  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+}
+
+/* layout */
+
+.container-fluid {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+}
+
+.row {
+  padding: 0 15px;
+  margin: 0 -15px;
+  display: flow-root;
+}
+
+.col-12 {
+  padding: 0 15px;
+}
+
+.col-11 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 11);
+}
+.col-10 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 10);
+}
+.col-9 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 9);
+}
+.col-8 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 8);
+}
+.col-7 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 7);
+}
+.col-6 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 6);
+}
+.col-5 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 5);
+}
+.col-4 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 4);
+}
+.col-3 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 3);
+}
+.col-2 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 2);
+}
+.col-1 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 1);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
