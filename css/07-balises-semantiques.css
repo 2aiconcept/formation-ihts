@@ -9,33 +9,23 @@ body {
   /* inclure les padding et border dans le calcul du width et du height de chaque element */
 }
 
-body {
-  background: #efcdf4;
-  font-size: 0;
-}
-
 body > header {
   height: 20%;
-  background: #f8afa1;
+  background: #2c93fa;
 }
 
-span {
-  height: 80%;
-  width: 50%;
-  padding: 20px 10px 20px 20px;
-  display: inline-block;
+main {
+  background: #f3fcff;
+  display: flow-root;
 }
 
-span:last-child {
-  padding: 20px 20px 20px 10px;
+body > footer {
+  height: 10%;
+  background: #2c93fa;
 }
 
-span > div {
-  height: 100%;
-}
-span div {
-  background: #b8eff3;
-}
-span:last-child div {
-  background: #b8f3da;
+body > header,
+main,
+body > footer {
+  padding: 15px;
 }
