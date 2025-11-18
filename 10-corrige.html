@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>
+      Page avec positionnements, modal et introduction aux systemes de grilles
+    </title>
+    <meta
+      name="description"
+      content="blabla"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/10-corrige.css"
+    />
+  </head>
+  <body>
+    <header class="row pt pb">
+      <div class="col-12">
+        <h1>Logo</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="row pt pb">
+        <div class="col-6">
+          <h1>Un titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            inventore unde asperiores! Consequatur, modi molestiae! Debitis
+            facere vero quos, omnis pariatur vitae! Et nostrum placeat
+            architecto? Dignissimos fugiat maiores dolorum?
+          </p>
+        </div>
+        <div class="col-6">
+          <h1>Un titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            inventore unde asperiores! Consequatur, modi molestiae! Debitis
+            facere vero quos, omnis pariatur vitae! Et nostrum placeat
+            architecto? Dignissimos fugiat maiores dolorum?
+          </p>
+        </div>
+      </section>
+
+      <section class="row pt pb">
+        <div class="col-6">
+          <h1>Un titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            inventore unde asperiores! Consequatur, modi molestiae! Debitis
+            facere vero quos, omnis pariatur vitae! Et nostrum placeat
+            architecto? Dignissimos fugiat maiores dolorum?
+          </p>
+        </div>
+        <div class="col-6">
+          <h1>Un titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            inventore unde asperiores! Consequatur, modi molestiae! Debitis
+            facere vero quos, omnis pariatur vitae! Et nostrum placeat
+            architecto? Dignissimos fugiat maiores dolorum?
+          </p>
+        </div>
+      </section>
+
+      <section class="row pt pb">
+        <div class="col-6">
+          <h1>Un titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            inventore unde asperiores! Consequatur, modi molestiae! Debitis
+            facere vero quos, omnis pariatur vitae! Et nostrum placeat
+            architecto? Dignissimos fugiat maiores dolorum?
+          </p>
+        </div>
+        <div class="col-6">
+          <h1>Un titre</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            inventore unde asperiores! Consequatur, modi molestiae! Debitis
+            facere vero quos, omnis pariatur vitae! Et nostrum placeat
+            architecto? Dignissimos fugiat maiores dolorum?
+          </p>
+        </div>
+      </section>
+
+      <section class="row pt pb">
+        <div class="col-12 center">
+          <button
+            class="btn"
+            id="openModal"
+          >
+            Open Dialog
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- modal -->
+    <dialog id="favDialog">
+      <p>Ceci est une boite de dialogue !</p>
+      <button
+        id="closeModal"
+        class="btn"
+      >
+        close
+      </button>
+    </dialog>
+
+    <script>
+      const openButton = document.getElementById("openModal");
+      const closeButton = document.getElementById("closeModal");
+      const dialog = document.getElementById("favDialog");
+
+      // Le bouton met à jour ouvre la boîte de dialogue modale
+      openButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // Le bouton annuler du formulaire ferme la boîte de dialogue
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>

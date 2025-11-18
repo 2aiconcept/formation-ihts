@@ -82,7 +82,65 @@
     </ul>
 
     <h1>Position sticky</h1>
+    <ul>
+      <li>
+        en position sticky, l'element se postionne par rapport à la fenetre du
+        navigateur
+      </li>
+      <li>il reste présent dans le flux et conserve sa place</li>
+      <li>reste collé à la fenetre du navigateur meme quand on scroll</li>
+    </ul>
 
     <h1>Les floats</h1>
+
+    <div class="floatElements">
+      <div>f1</div>
+      <div>f2</div>
+      <div></div>
+    </div>
+
+    <ul>
+      <li>en flot, les elements sortent du flux de positionnement</li>
+      <li>
+        un float prend la largeur de son contenu, il faut lui redonner en css un
+        width
+      </li>
+      <li>ils restent à leur place dans le dom</li>
+      <li>
+        les elements freres qui suivent les float glissent en dessous pour
+        prendre leur place dans le flux
+      </li>
+      <li>
+        l'element qui suit le parent de floats va également avoir tendence a
+        glisser dessous car par defaut un parent qui ne contient que des floats
+        fait 0px de haut. il ne prend pas en compte la hauteur de ses enfants
+        flotants dans le cacul de sa propre hauteur. il faut ajouter du css si
+        on veut qu'il reprenne la hauteur de ses enfants floats (overflow: auto
+        ou display: flow-root)
+      </li>
+    </ul>
+    <button id="openModal">open modal</button>
+
+    <!-- modal -->
+    <dialog id="favDialog">
+      <button id="closeModal">close</button>
+      <p>Ceci est une boite de dialogue</p>
+    </dialog>
+
+    <script>
+      const openButton = document.getElementById("openModal");
+      const closeButton = document.getElementById("closeModal");
+      const dialog = document.getElementById("favDialog");
+
+      // Le bouton met à jour ouvre la boîte de dialogue modale
+      openButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // Le bouton annuler du formulaire ferme la boîte de dialogue
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
   </body>
 </html>

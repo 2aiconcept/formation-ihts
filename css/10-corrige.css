@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+}
+
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+}
+
+/* layout */
+
+.row {
+  padding: 0 15px;
+  margin: 0 -15px;
+  display: flow-root;
+}
+
+.col-12 {
+  padding: 0 15px;
+}
+
+.col-6 {
+  padding: 0 15px;
+  float: left;
+  width: calc((100% / 12) * 6);
+}
+
+/* padding and margin */
+
+.pt {
+  padding-top: 15px;
+}
+.pb {
+  padding-bottom: 15px;
+}
+
+/* backgrounds */
+
+header {
+  background: #1aa1d6;
+  background: linear-gradient(
+    103deg,
+    rgba(26, 161, 214, 1) 0%,
+    rgba(134, 194, 138, 1) 49%,
+    rgba(247, 228, 57, 1) 100%
+  );
+}
+
+section:first-child {
+  background: rgb(26, 161, 214);
+}
+
+section:nth-child(2) {
+  background: rgb(134, 194, 138);
+}
+
+section:nth-child(3) {
+  background: rgb(247, 228, 57);
+}
+
+/* buttons */
+.btn {
+  padding: 5px 8px;
+  border-radius: 2px;
+  color: #fff;
+  background: rgb(26, 161, 214);
+  border: 1px solid rgb(16, 104, 138);
+  font-size: 1.1rem;
+}
+
+/* alignements */
+
+.center {
+  text-align: center;
+}
+
+/* dialog elements */
+
+dialog {
+  border-radius: 5px;
+  border: 1px solid rgb(17, 102, 135);
+  color: rgb(17, 102, 135);
+  font-size: 1.1rem;
+  -webkit-box-shadow: -1px 6px 13px 2px rgba(0, 0, 0, 0.34);
+  box-shadow: -1px 6px 13px 2px rgba(0, 0, 0, 0.34);
+}

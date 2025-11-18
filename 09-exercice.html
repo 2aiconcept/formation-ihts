@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Exercice</title>
+    <meta
+      name="description"
+      content="exercice sur les display, width et height en % et marges "
+    />
+    <link
+      rel="stylesheet"
+      href="./css/09-exercice.css"
+    />
+  </head>
+  <body>
+    <header class="row">
+      <div class="col-12">
+        <h1>Logo</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="row">
+        <div class="col-6">
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id,
+            aspernatur? Aliquid harum vitae cum dolor reiciendis dolorum debitis
+            sequi! Doloremque corporis voluptate quod eveniet ex nobis officia
+            sunt praesentium dignissimos.
+          </p>
+        </div>
+        <div class="col-6">
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id,
+            aspernatur? Aliquid harum vitae cum dolor reiciendis dolorum debitis
+            sequi! Doloremque corporis voluptate quod eveniet ex nobis officia
+            sunt praesentium dignissimos.
+          </p>
+        </div>
+      </section>
+
+      <section class="row">
+        <div class="col-6">
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id,
+            aspernatur? Aliquid harum vitae cum dolor reiciendis dolorum debitis
+            sequi! Doloremque corporis voluptate quod eveniet ex nobis officia
+            sunt praesentium dignissimos.
+          </p>
+        </div>
+        <div class="col-6">
+          <h1>Titre</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id,
+            aspernatur? Aliquid harum vitae cum dolor reiciendis dolorum debitis
+            sequi! Doloremque corporis voluptate quod eveniet ex nobis officia
+            sunt praesentium dignissimos.
+          </p>
+        </div>
+      </section>
+      <div class="row pt pb">
+        <div class="col-12 center">
+          <button
+            class="btn"
+            id="openModal"
+          >
+            Open Modal
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- modal -->
+    <dialog id="favDialog">
+      <p>Ceci est une boite de dialogue !</p>
+      <button
+        id="closeModal"
+        class="btn"
+      >
+        close
+      </button>
+    </dialog>
+
+    <script>
+      const openButton = document.getElementById("openModal");
+      const closeButton = document.getElementById("closeModal");
+      const dialog = document.getElementById("favDialog");
+
+      // Le bouton met à jour ouvre la boîte de dialogue modale
+      openButton.addEventListener("click", () => {
+        dialog.showModal();
+      });
+
+      // Le bouton annuler du formulaire ferme la boîte de dialogue
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+    </script>
+  </body>
+</html>

@@ -9,9 +9,9 @@ body {
   /* inclure les padding et border dans le calcul du width et du height de chaque element */
 }
 
-body {
+/* body {
   padding-top: 60px;
-}
+} */
 
 .posr p,
 .posa p {
@@ -43,8 +43,22 @@ body {
 header {
   height: 60px;
   background: rgba(0, 0, 0, 0.3);
-  position: fixed;
+  /* position: fixed;
   width: 100%;
   top: 0;
+  left: 0; */
+  position: sticky;
+  top: 0;
   left: 0;
+}
+
+.floatElements {
+  background: #f3b4b4;
+  /* overflow: auto; */
+  display: flow-root;
+}
+.floatElements div {
+  float: left;
+  width: 33.33%;
+  height: 150px;
 }
