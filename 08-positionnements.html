@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Exercice</title>
+    <meta
+      name="description"
+      content="exercice sur les display, width et height en % et marges "
+    />
+    <link
+      rel="stylesheet"
+      href="./css/08-positionnements.css"
+    />
+  </head>
+  <body>
+    <header>logo et menu de navigation et barre de recherche</header>
+    <h1>position relative</h1>
+    <div class="posr">
+      <img
+        src="./img/elephant.jpg"
+        alt="elephant"
+      />
+      <p>Ceci est un troupeau d'éléphants d'affrique</p>
+    </div>
+    <ul>
+      <li>
+        on peut positionner un element en relative en décalant sont point
+        top/left , top/right, bottom/left ou bottom/right par rapport à son
+        point d'origine
+      </li>
+      <li>
+        l'element se positionne ou l'on veut sans perturber le flux de
+        posiotionnement des autres éléments en se mettant au dessus
+      </li>
+      <li>sa place d'origine est conservée dans le flux</li>
+    </ul>
+
+    <h1>position absolute</h1>
+    <div class="posa">
+      <img
+        src="./img/elephant.jpg"
+        alt="elephant"
+      />
+      <p>Ceci est un troupeau d'éléphants d'affrique</p>
+      <ul>
+        <li>
+          un bloc en postion absolute sort complètement du flux de
+          posiotionnement sa place n'est plus conservée dans le DOM
+        </li>
+        <li>
+          il se positionne en top/left, top/right, bottom/left ou bottom/right
+          par rapport à l'element ascendant le plus proche lui meme positionné
+          en relative ou en absolute
+        </li>
+        <li>
+          en l'absence d'element ascendant lui meme positionné en retive ou en
+          absolute, il se positionne en top/left, top/right, bototm/left ou
+          bottom/right par rapport à la fenetre (haut de page sans scroll) du
+          navigateur
+        </li>
+      </ul>
+    </div>
+
+    <h1>POSITION fixed</h1>
+
+    <ul>
+      <li>
+        un element en postion fixed sort completement du flux de positionnement
+      </li>
+      <li>sa place n'est plus réservée dans le dom</li>
+      <li>
+        il ne saura plus prendre la largeur du parent car il est sorti du flux
+      </li>
+      <li>
+        se positionne en top-left, top-right, bottom-left ou bottom-right par
+        rapport à la fenetre du navigateur.
+      </li>
+    </ul>
+
+    <h1>Position sticky</h1>
+
+    <h1>Les floats</h1>
+  </body>
+</html>
