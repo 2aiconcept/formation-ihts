@@ -6,7 +6,7 @@ body {
 
 * {
   box-sizing: border-box;
-  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+  /* inclure les padding et border dans le calcul du width et du height de chaque block */
 }
 
 div {
