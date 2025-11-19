@@ -11,25 +11,35 @@ body {
   /* inclure les padding et border dans le calcul du width et du height de chaque element */
 }
 
+/* varibles colors  */
+:root {
+  --primary-color: #e1d5e7;
+  --secondary-color: #f8cecc;
+  --tertiary-color: #fff2cc;
+  --quaternary-color: #d5e8d4;
+  --last-color: #dae8fc;
+  --spacing: 1rem;
+}
+
 /* layout */
 
 .container-fluid {
   width: 100%;
   max-width: 1920px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 var(--spacing);
 }
 
 .container {
   width: 100%;
   max-width: 1260px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 var(--spacing);
 }
 
 .row {
   display: flex;
-  /* gap: 15px; */
+  /* gap: var(--spacing); */
   flex-wrap: wrap;
 }
 
@@ -78,24 +88,25 @@ img {
 
 /* backgrounds */
 .purple {
-  background: #e1d5e7;
+  background: var(--primary-color);
 }
 .pink {
-  background: #f8cecc;
+  background: var(--secondary-color);
 }
 .yellow {
-  background: #fff2cc;
+  background: var(--tertiary-color);
 }
 .green {
-  background: #d5e8d4;
+  background: var(--quaternary-color);
 }
 .blue {
-  background: #dae8fc;
+  background: var(--last-color);
 }
 
 @media (min-width: 768px) {
   .col-md-6 {
     width: calc((100% / 12) * 6);
+    padding: 0 var(--spacing);
   }
   .col-md-4 {
     width: calc((100% / 12) * 4);
@@ -103,10 +114,14 @@ img {
 }
 
 @media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
   .col-xl-4 {
     width: calc((100% / 12) * 4);
   }
   .col-xl-6 {
     width: calc((100% / 12) * 6);
+    padding: 0 var(--spacing);
   }
 }

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Balise Audio HTML5</title>
+    <link
+      rel="stylesheet"
+      href="./css/16-audio.css"
+    />
+  </head>
+  <body>
+    <h1>Exemples : Balise &lt;audio&gt; HTML5</h1>
+
+    <!-- Exemple 1 : Audio basique avec contrôles -->
+    <div class="audio-container">
+      <h2>1. Audio simple avec contrôles</h2>
+
+      <audio controls>
+        <source
+          src="./sounds/tone-beep-slower-lower-large-verb-104165.mp3"
+          type="audio/mpeg"
+        />
+        Votre navigateur ne supporte pas la balise audio.
+      </audio>
+
+      <div class="info-box">
+        <p><strong>Attribut utilisé :</strong> <code>controls</code></p>
+        <p>
+          Affiche les contrôles de lecture : play/pause, volume, barre de
+          progression.
+        </p>
+      </div>
+    </div>
+
+    <!-- Exemple 2 : Audio avec autoplay et loop -->
+    <div class="audio-container">
+      <h2>2. Musique d'ambiance (autoplay + loop)</h2>
+
+      <audio
+        autoplay
+        loop
+        muted
+        controls
+      >
+        <source
+          src="./sounds/tone-beep-slower-lower-large-verb-104165.mp3"
+          type="audio/mpeg"
+        />
+        Votre navigateur ne supporte pas la balise audio.
+      </audio>
+
+      <div class="info-box">
+        <p>
+          <strong>Attributs utilisés :</strong> <code>autoplay loop muted</code>
+        </p>
+        <p>
+          <code>autoplay</code> fonctionne uniquement avec
+          <code>muted</code> (son coupé).
+        </p>
+        <p>L'utilisateur peut ensuite activer le son avec les contrôles.</p>
+      </div>
+    </div>
+
+    <!-- Exemple 3 : Audio sans contrôles (invisible) -->
+    <div class="audio-container">
+      <h2>3. Audio sans contrôles visibles</h2>
+
+      <audio>
+        <source
+          src="./sounds/tone-beep-slower-lower-large-verb-104165.mp3"
+          type="audio/mpeg"
+        />
+        Votre navigateur ne supporte pas la balise audio.
+      </audio>
+
+      <p>Un son de notification (invisible, contrôlé par JavaScript)</p>
+
+      <div class="info-box">
+        <p>
+          <strong>Sans l'attribut <code>controls</code></strong
+          >, l'audio est invisible.
+        </p>
+        <p>
+          Utile pour des sons d'effets, notifications, etc. (nécessite
+          JavaScript pour lancer).
+        </p>
+      </div>
+    </div>
+
+    <!-- Exemple 4 : Plusieurs formats pour compatibilité -->
+    <div class="audio-container">
+      <h2>4. Compatibilité multi-formats</h2>
+
+      <audio controls>
+        <source
+          src="./sounds/tone-beep-slower-lower-large-verb-104165.mp3"
+          type="audio/mpeg"
+        />
+        Votre navigateur ne supporte pas la balise audio.
+      </audio>
+
+      <div class="info-box">
+        <p><strong>3 formats fournis :</strong> MP3, OGG, WAV</p>
+        <p>
+          Le navigateur choisit automatiquement le premier format qu'il
+          supporte.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tableau récapitulatif -->
+    <div class="audio-container">
+      <h2>Attributs de la balise &lt;audio&gt;</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Attribut</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>controls</code></td>
+            <td>Affiche les contrôles de lecture (play, pause, volume)</td>
+          </tr>
+          <tr>
+            <td><code>autoplay</code></td>
+            <td>
+              Lance automatiquement la lecture (nécessite <code>muted</code>)
+            </td>
+          </tr>
+          <tr>
+            <td><code>loop</code></td>
+            <td>Rejoue l'audio en boucle</td>
+          </tr>
+          <tr>
+            <td><code>muted</code></td>
+            <td>Audio sans son par défaut</td>
+          </tr>
+          <tr>
+            <td><code>preload</code></td>
+            <td>
+              Précharge l'audio : <code>none</code>, <code>metadata</code>,
+              <code>auto</code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Formats audio -->
+    <div class="audio-container">
+      <h2>Formats audio compatibles</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Format</th>
+            <th>Extension</th>
+            <th>Type MIME</th>
+            <th>Caractéristiques</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>MP3</strong></td>
+            <td>.mp3</td>
+            <td><code>audio/mpeg</code></td>
+            <td>Universel, le plus compatible</td>
+          </tr>
+          <tr>
+            <td><strong>OGG</strong></td>
+            <td>.ogg</td>
+            <td><code>audio/ogg</code></td>
+            <td>Open source, bonne qualité</td>
+          </tr>
+          <tr>
+            <td><strong>WAV</strong></td>
+            <td>.wav</td>
+            <td><code>audio/wav</code></td>
+            <td>Sans perte, fichiers lourds</td>
+          </tr>
+          <tr>
+            <td><strong>AAC</strong></td>
+            <td>.aac</td>
+            <td><code>audio/aac</code></td>
+            <td>Utilisé par Apple, bonne compression</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bonnes pratiques -->
+    <div
+      style="
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #fff3cd;
+        border-radius: 10px;
+        border-left: 4px solid #ffc107;
+      "
+    >
+      <h3>Bonnes pratiques</h3>
+      <ul>
+        <li>
+          Toujours fournir au moins <strong>2 formats</strong> (MP3 + OGG
+          minimum)
+        </li>
+        <li>
+          Utiliser <code>controls</code> pour que l'utilisateur puisse contrôler
+          la lecture
+        </li>
+        <li>
+          Éviter <code>autoplay</code> sauf pour musique d'ambiance (avec
+          <code>muted</code>)
+        </li>
+        <li>Inclure un message de fallback pour les vieux navigateurs</li>
+        <li>Les fichiers audio peuvent être lourds : optimisez la taille !</li>
+      </ul>
+    </div>
+  </body>
+</html>

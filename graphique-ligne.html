@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Graphique en Ligne SVG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .ligne {
+      fill: none;
+      stroke: #2196F3;
+      stroke-width: 3;
+    }
+    
+    .point {
+      fill: #2196F3;
+      transition: r 0.3s;
+      cursor: pointer;
+    }
+    
+    .point:hover {
+      r: 8;
+      fill: #1976D2;
+    }
+    
+    .grille {
+      stroke: #e0e0e0;
+      stroke-width: 1;
+    }
+    
+    .axe {
+      stroke: #333;
+      stroke-width: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📈 Évolution du Trafic Web (2024)</h1>
+    
+    <svg width="800" height="450" viewBox="0 0 800 450">
+      <!-- Titre -->
+      <text x="400" y="30" text-anchor="middle" style="font-size: 20px; font-weight: bold; fill: #333;">
+        Visiteurs Uniques (en milliers)
+      </text>
+      
+      <!-- Grille -->
+      <line x1="80" y1="80" x2="750" y2="80" class="grille"/>
+      <line x1="80" y1="140" x2="750" y2="140" class="grille"/>
+      <line x1="80" y1="200" x2="750" y2="200" class="grille"/>
+      <line x1="80" y1="260" x2="750" y2="260" class="grille"/>
+      <line x1="80" y1="320" x2="750" y2="320" class="grille"/>
+      <line x1="80" y1="380" x2="750" y2="380" class="grille"/>
+      
+      <!-- Axes -->
+      <line x1="80" y1="80" x2="80" y2="380" class="axe"/>
+      <line x1="80" y1="380" x2="750" y2="380" class="axe"/>
+      
+      <!-- Labels axe Y -->
+      <text x="60" y="85" style="font-size: 14px; fill: #555;">100</text>
+      <text x="65" y="145" style="font-size: 14px; fill: #555;">80</text>
+      <text x="65" y="205" style="font-size: 14px; fill: #555;">60</text>
+      <text x="65" y="265" style="font-size: 14px; fill: #555;">40</text>
+      <text x="65" y="325" style="font-size: 14px; fill: #555;">20</text>
+      <text x="70" y="385" style="font-size: 14px; fill: #555;">0</text>
+      
+      <!-- Ligne du graphique (polyline) -->
+      <!-- Points : Jan(25k), Fév(35k), Mars(45k), Avr(55k), Mai(75k), Juin(65k), Juil(85k) -->
+      <polyline points="130,305 230,275 330,245 430,215 530,155 630,185 730,125" 
+                class="ligne"/>
+      
+      <!-- Zone sous la courbe (optionnel) -->
+      <polygon points="130,305 230,275 330,245 430,215 530,155 630,185 730,125 730,380 130,380" 
+               fill="rgba(33, 150, 243, 0.1)"/>
+      
+      <!-- Points de données -->
+      <circle cx="130" cy="305" r="5" class="point"/>
+      <circle cx="230" cy="275" r="5" class="point"/>
+      <circle cx="330" cy="245" r="5" class="point"/>
+      <circle cx="430" cy="215" r="5" class="point"/>
+      <circle cx="530" cy="155" r="5" class="point"/>
+      <circle cx="630" cy="185" r="5" class="point"/>
+      <circle cx="730" cy="125" r="5" class="point"/>
+      
+      <!-- Labels mois -->
+      <text x="130" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Jan</text>
+      <text x="230" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Fév</text>
+      <text x="330" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Mars</text>
+      <text x="430" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Avr</text>
+      <text x="530" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Mai</text>
+      <text x="630" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Juin</text>
+      <text x="730" y="405" text-anchor="middle" style="font-size: 14px; fill: #555;">Juil</text>
+      
+      <!-- Valeurs sur les points -->
+      <text x="130" y="295" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">25k</text>
+      <text x="230" y="265" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">35k</text>
+      <text x="330" y="235" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">45k</text>
+      <text x="430" y="205" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">55k</text>
+      <text x="530" y="145" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">75k</text>
+      <text x="630" y="175" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">65k</text>
+      <text x="730" y="115" text-anchor="middle" style="font-size: 12px; font-weight: bold; fill: #2196F3;">85k</text>
+    </svg>
+  </div>
+
+</body>
+</html>

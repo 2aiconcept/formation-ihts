@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- ! + tab pour structure html avec emmet -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./css/15-videos.css"
+    />
+  </head>
+  <body>
+    <h1>Ma Première Vidéo</h1>
+
+    <video
+      width="640"
+      height="360"
+      controls
+    >
+      <source
+        src="./videos/ia_video.mp4"
+        type="video/mp4"
+      />
+      Votre navigateur ne supporte pas la balise vidéo HTML5.
+    </video>
+
+    <h1>Exemple Complet : Balise &lt;video&gt; HTML5</h1>
+
+    <!-- Exemple 1 : Vidéo basique avec tous les attributs importants -->
+    <div class="video-container">
+      <h2>Vidéo avec tous les attributs essentiels</h2>
+
+      <video
+        width="800"
+        height="450"
+        controls
+        poster="https://via.placeholder.com/800x450/1e40af/ffffff?text=Cliquez+pour+lire"
+        preload="metadata"
+      >
+        <!-- Plusieurs formats pour compatibilité -->
+        <source
+          src="./videos/ia_video.mp4"
+          type="video/mp4"
+        />
+
+        <!-- Sous-titres en plusieurs langues -->
+        <track
+          src="sous-titres-fr.vtt"
+          kind="subtitles"
+          srclang="fr"
+          label="Français"
+          default
+        />
+        <track
+          src="sous-titres-en.vtt"
+          kind="subtitles"
+          srclang="en"
+          label="English"
+        />
+
+        <!-- Message si le navigateur ne supporte pas -->
+        Votre navigateur ne supporte pas la balise vidéo HTML5.
+        <a href="./videos/ia_video.mp4">Télécharger la vidéo</a>
+      </video>
+
+      <div class="video-info">
+        <h3>Informations sur cette vidéo</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-label">Dimensions</div>
+            <div class="info-value">800 x 450 pixels</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Formats fournis</div>
+            <div class="info-value">MP4</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Sous-titres</div>
+            <div class="info-value">Français, Anglais</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Image poster</div>
+            <div class="info-value">Oui (avant lecture)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exemple 2 : Vidéo avec autoplay et loop -->
+    <div class="video-container">
+      <h2>Vidéo en boucle (autoplay + loop)</h2>
+
+      <video
+        width="400"
+        height="300"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source
+          src="./videos/ia_video.mp4"
+          type="video/mp4"
+        />
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+
+      <div class="video-info">
+        <h3>Note importante</h3>
+        <p>
+          <strong>autoplay</strong> ne fonctionne que si la vidéo est
+          <code>muted</code> (sans son). C'est une règle des navigateurs
+          modernes pour éviter les vidéos bruyantes automatiques.
+        </p>
+        <p>
+          <strong>playsinline</strong> est nécessaire sur iOS pour éviter le
+          plein écran automatique.
+        </p>
+      </div>
+    </div>
+
+    <!-- Exemple 3 : Vidéo responsive (s'adapte à l'écran) -->
+    <div class="video-container">
+      <h2>Vidéo responsive (s'adapte à toutes les tailles d'écran)</h2>
+
+      <video
+        controls
+        style="width: 100%; height: auto"
+      >
+        <source
+          src="./videos/ia_video.mp4"
+          type="video/mp4"
+        />
+
+        Votre navigateur ne supporte pas la vidéo HTML5.
+      </video>
+
+      <div class="video-info">
+        <h3>Astuce Responsive</h3>
+        <p>
+          En utilisant <code>width: 100%</code> et <code>height: auto</code>, la
+          vidéo s'adapte automatiquement à la taille de l'écran (mobile,
+          tablette, desktop).
+        </p>
+      </div>
+    </div>
+
+    <!-- Tableau récapitulatif des attributs -->
+    <div class="attributs-list">
+      <h2>Attributs de la balise &lt;video&gt;</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Attribut</th>
+            <th>Description</th>
+            <th>Valeurs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>controls</code></td>
+            <td>
+              Affiche les contrôles de lecture (play, pause, volume, etc.)
+            </td>
+            <td>Pas de valeur (présence = activé)</td>
+          </tr>
+          <tr>
+            <td><code>autoplay</code></td>
+            <td>Démarre automatiquement la lecture</td>
+            <td>Pas de valeur (nécessite <code>muted</code>)</td>
+          </tr>
+          <tr>
+            <td><code>loop</code></td>
+            <td>Rejoue la vidéo en boucle</td>
+            <td>Pas de valeur</td>
+          </tr>
+          <tr>
+            <td><code>muted</code></td>
+            <td>Vidéo sans son par défaut</td>
+            <td>Pas de valeur</td>
+          </tr>
+          <tr>
+            <td><code>poster</code></td>
+            <td>Image affichée avant la lecture</td>
+            <td>URL de l'image</td>
+          </tr>
+          <tr>
+            <td><code>preload</code></td>
+            <td>Précharge la vidéo</td>
+            <td><code>none</code>, <code>metadata</code>, <code>auto</code></td>
+          </tr>
+          <tr>
+            <td><code>width</code></td>
+            <td>Largeur de la vidéo en pixels</td>
+            <td>Nombre (ex: 800)</td>
+          </tr>
+          <tr>
+            <td><code>height</code></td>
+            <td>Hauteur de la vidéo en pixels</td>
+            <td>Nombre (ex: 450)</td>
+          </tr>
+          <tr>
+            <td><code>playsinline</code></td>
+            <td>Lecture sans plein écran sur mobile (iOS)</td>
+            <td>Pas de valeur</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      style="
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #fff3cd;
+        border-radius: 10px;
+        border-left: 4px solid #ffc107;
+      "
+    >
+      <h3>Bonnes pratiques</h3>
+      <ul>
+        <li>
+          Toujours fournir <strong>plusieurs formats</strong> (MP4 + WebM
+          minimum) pour compatibilité
+        </li>
+        <li>Utiliser <strong>poster</strong> pour une belle image d'aperçu</li>
+        <li>
+          Ajouter des <strong>sous-titres</strong> (balise &lt;track&gt;) pour
+          l'accessibilité
+        </li>
+        <li>
+          <strong>Éviter autoplay</strong> sauf pour vidéos d'arrière-plan sans
+          son
+        </li>
+        <li>Pour responsive : <code>width: 100%; height: auto;</code></li>
+        <li>Toujours inclure un message de fallback pour vieux navigateurs</li>
+      </ul>
+    </div>
+  </body>
+</html>
