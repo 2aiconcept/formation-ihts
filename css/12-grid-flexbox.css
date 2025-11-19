@@ -1,0 +1,173 @@
+html,
+body {
+  margin: 0;
+}
+
+* {
+  border: 1px solid rgb(4, 10, 121);
+  background: rgba(151, 151, 243, 0.385);
+  box-sizing: border-box;
+  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+}
+
+/* layout */
+
+.container-fluid {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-11 {
+  width: calc((100% / 12) * 11);
+}
+.col-10 {
+  width: calc((100% / 12) * 10);
+}
+.col-9 {
+  width: calc((100% / 12) * 9);
+}
+.col-8 {
+  width: calc((100% / 12) * 8);
+}
+.col-7 {
+  width: calc((100% / 12) * 7);
+}
+.col-6 {
+  width: calc((100% / 12) * 6);
+}
+.col-5 {
+  width: calc((100% / 12) * 5);
+}
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+.col-3 {
+  width: calc((100% / 12) * 3);
+}
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+.col-1 {
+  width: calc((100% / 12) * 1);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* header */
+header p {
+  color: rgb(8, 146, 201);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  flex-grow: 1;
+}
+
+nav a {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  background-color: rgb(228, 228, 228);
+  border: 1px solid rgb(51, 51, 51);
+  text-transform: uppercase;
+  padding: 8px;
+}
+
+nav a:hover {
+  color: rgb(8, 146, 201);
+  background-color: rgb(51, 51, 51);
+}
+
+nav a:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+nav a:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  margin-right: 15px;
+}
+
+/* section bots */
+
+.bots > div {
+  background: rgb(228, 228, 228);
+  border-radius: 6px;
+  border: 1px solid rgb(51, 51, 51);
+  text-align: center;
+}
+
+.bots img {
+  width: 30%;
+  margin-top: 15px;
+}
+
+.bots h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: rgb(51, 51, 51);
+}
+
+.bots p {
+  text-transform: capitalize;
+  color: rgb(51, 51, 51);
+}
+
+/* find us */
+
+.findus > div {
+  text-align: center;
+}
+.findus a {
+  display: inline-block;
+  width: 100%;
+  padding: 100px 5px 5px 5px;
+  background: rgb(51, 51, 51);
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.findus img {
+  position: relative;
+  top: 86px;
+}

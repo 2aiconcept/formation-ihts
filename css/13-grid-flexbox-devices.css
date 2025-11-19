@@ -1,0 +1,112 @@
+html,
+body {
+  margin: 0;
+}
+
+* {
+  border: 1px solid rgb(4, 10, 121);
+  /* background: rgba(151, 151, 243, 0.385); */
+  min-height: 60px;
+  box-sizing: border-box;
+  /* inclure les padding et border dans le calcul du width et du height de chaque element */
+}
+
+/* layout */
+
+.container-fluid {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  /* gap: 15px; */
+  flex-wrap: wrap;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-11 {
+  width: calc((100% / 12) * 11);
+}
+.col-10 {
+  width: calc((100% / 12) * 10);
+}
+.col-9 {
+  width: calc((100% / 12) * 9);
+}
+.col-8 {
+  width: calc((100% / 12) * 8);
+}
+.col-7 {
+  width: calc((100% / 12) * 7);
+}
+.col-6 {
+  width: calc((100% / 12) * 6);
+}
+.col-5 {
+  width: calc((100% / 12) * 5);
+}
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+.col-3 {
+  width: calc((100% / 12) * 3);
+}
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+.col-1 {
+  width: calc((100% / 12) * 1);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* backgrounds */
+.purple {
+  background: #e1d5e7;
+}
+.pink {
+  background: #f8cecc;
+}
+.yellow {
+  background: #fff2cc;
+}
+.green {
+  background: #d5e8d4;
+}
+.blue {
+  background: #dae8fc;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    width: calc((100% / 12) * 6);
+  }
+  .col-md-4 {
+    width: calc((100% / 12) * 4);
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-4 {
+    width: calc((100% / 12) * 4);
+  }
+  .col-xl-6 {
+    width: calc((100% / 12) * 6);
+  }
+}
